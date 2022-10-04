@@ -1,0 +1,347 @@
+@font-face {
+    font-family:"Raleway";
+    font-style: normal;
+    font-weight:800;
+    src: url("../fonts/raleway/raleway-800.woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/rubik/rubik-400.woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/rubik/rubik-700.woff2");
+    font-display: swap;
+}
+
+body {
+    font-family: "Rubik", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    background-color: #ffffff;
+    color: #444444;
+}
+
+.raleway {
+    font-family: "Raleway", "Arial", sans-serif;
+    color: #000000;
+}
+.page-header {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1160px;
+}
+.navigation {
+    background: #FFE17F;
+}
+
+.search-form {
+    line-height: 20px;
+}
+
+.action-nav-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-item a:not(.nav-category-item a) {
+    font-weight:800;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.nav-category-item a {
+    font-size: 16px;
+    line-height: 18px;
+    text-decoration:none;
+    color: #000000;
+}
+.slider {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1160px;
+}
+.slider-item {
+    width: 1160px;
+    background: linear-gradient(to bottom, #FFE17F 25%, #ffffff 25%);}
+
+.slogan {
+    font-weight:800;
+    font-size: 50px;
+    line-height: 50px;
+    text-align: left;
+    
+    height: 100px;
+    background-color:#FFE17F;
+    padding-top: 92px;
+    background-repeat:no-repeat;
+    background-position: 83% top;
+}
+.slogan-one {
+    background-image: url("../images/slider01.svg");
+   }
+
+.slogan-two {
+    background-image: url("../images/slider02.svg");
+}
+
+.slogan-three {
+    background-image: url("../images/slider03.svg");
+}
+.number {
+    font-size: 36px;
+    color: #000000;
+}
+.slider-item-description {
+    width: 560px;
+    height: auto;
+}
+.categories {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1160px;
+}
+.category {
+    width: 160px;
+    height:253px;
+}
+.category a {
+    background-color: #FFE17F;
+    text-decoration: none;
+}
+
+.category span {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    color:#000000;
+}
+
+.advantages {
+    background-color: #F0F0F0;
+    
+}
+
+.advantage h3 {
+    font-weight:800;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.advantages-description p {
+    width: 448px;
+   
+}
+
+.advantage-delivery {
+    background-image: url("../images/running-man.png");
+    background-repeat:no-repeat;
+    background-position: 50% top;
+}
+
+.advantage-warranty {
+    background-image: url("../images/warranty-icon.png");
+    background-repeat:no-repeat;
+    background-position: 50% top;
+}
+
+.advantage-credit {
+        background-image: url("../images/credit-icon.png");
+        background-repeat:no-repeat;
+        background-position: 50% top;
+}
+
+.button-wedeliver {
+    display: block;
+    width: 1160px;
+    background-color: #F0F0F0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wedeliverpicture {
+    display: block;
+    background-color: #FFE17F;
+    width: 125px;
+    height: 100px;
+    background-image: url("../images/truck.svg");
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+.wedelivertext {
+    display: block;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+}
+
+.information-block {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1160px;
+}
+
+.information-header {
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.information-paragraph {
+    width: 500px;
+}
+
+.transport {
+    font-weight:700;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.address-header {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.contact-address {
+    font-style: normal;
+}
+
+.contact-phone {
+    color: inherit
+}
+
+.subsribe {
+    background-color: #F0F0F0;
+}
+
+.page-footer {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+.footer-logo-block address {
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.footer-nav-item a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.footer-tel {
+    color: inherit;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.inner-header h1 {
+    font-size: 50px;
+    line-height:50px;
+}
+
+.breadcrumbs-link {
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: none;
+    color:#000000;
+}
+
+.main-info {
+    background: #F0F0F0;
+}
+
+.main-info-header {
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+.filter-label {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    color:#000000;
+}
+
+.color-list, .bluetooth-radio-list {
+    font-size: 16px;
+    line-height:20px;
+    color: #000000;
+}
+
+.monopods {
+    background:#ffffff;
+}
+
+.sort-form {
+    background: #F0F0F0
+}
+
+.item-name {
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.catalog-paginator {
+    background: #F0F0F0
+}
+
+.paginator-link {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:#444444
+}
+
+.link-disabled {
+    color:#444444;
+}
+
+.link-enabled {
+    color:#000000;
+}
+
+
+
+
+
+
+.modal-header {
+    font-size: 50px;
+    line-height:50px;
+}
+
+.delivery-form label {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.item-price {
+    line-height: 21px;
+}
+
+
+
+
+
+
