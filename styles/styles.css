@@ -25,6 +25,7 @@
 html {
     height:100%;
 }
+
 body {
     font-family: "Rubik", "Arial", sans-serif;
     font-size: 18px;
@@ -44,7 +45,14 @@ body {
 }
 
 .visually-hidden {
-    display: none;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
 }
 
 /*Хедер*/
@@ -52,10 +60,20 @@ body {
 .page-header {
     margin: 0 auto;
     width: 1160px;  
+    position: relative;
+}
+
+.header-logo {
+    position: absolute;
+    left: 60px;
+    top: 20px;
 }
 
 .navigation {
     background: #FFE17F;
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
 }
 
 .container {
@@ -63,12 +81,33 @@ body {
     padding: 0; 
     width: 1040px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top:45px;
+    }
+
+.nav-first-row {
+    display: flex;
+    margin-bottom: 49px;
 }
+
 
 .search-form-block {
     line-height: 20px;
-    width: 517px;       
+    box-sizing: border-box;
+    margin-top: 6px;
+}
+
+.search-form input{
+    width: 360px;
+    height: 40px;
+    margin-right: 0;
+}
+
+.search-button {
+    display: inline;
+    width: 160px;
+    height: 40px;
+    margin-right: 10px;
 }
 
 .action-nav {
@@ -79,9 +118,35 @@ body {
     padding: 0;
 }
 
+.action-nav-item {
+    margin-right: 20px;
+}
+
 .action-nav-item a {
     text-decoration: none;
     color: black;
+    display: block;
+    text-align: right;
+}
+
+.entered {
+    width: 156px;
+}
+
+.compare-link {
+    margin-left: auto;
+}
+
+.enter-link a {
+    min-width: 81px;
+}
+
+.compare-link a {
+    width: 105px;
+}
+
+.basket a {
+    min-width:118px;
 }
 
 .main-nav {
@@ -89,6 +154,22 @@ body {
     display: flex;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
+    margin-bottom:30px;
+}
+
+.nav-item {
+    box-sizing: border-box;
+} 
+.catalog {
+    position:relative;
+}
+
+.delivery {
+    margin-left:auto;
+}
+.nav-item:not(.main-nav li:first-child, .main-nav li:last-child) {
+    margin-right: 47px;
 }
 
 .nav-item a:not(.nav-category-item a) {
@@ -98,11 +179,23 @@ body {
     font-size: 18px;
     line-height: 21px;
     letter-spacing: 0.2em;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0;
 }
 
 .nav-category-list {
     display: none;
+    position: absolute; 
+    width: 1060px;
+    min-height: 180px;
+    background-color: #FFE17F;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    left: -10px
+    /*Похоже, это меню надо делать на гридах*/
 }
 
 .nav-category-item a {
@@ -110,8 +203,12 @@ body {
     line-height: 18px;
     text-decoration:none;
     color: #000000;
+    display: block;
+    padding: 5px;
 }
+
 /*Main*/
+
 .main-container {
     flex-grow: 1;
 }
@@ -127,6 +224,7 @@ body {
     width: 1160px;
     background: linear-gradient(to bottom, #FFE17F 25%, #ffffff 25%);
     display:flex;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
 }
@@ -135,6 +233,9 @@ body {
     margin: 0;
     padding: 0;
     width: 560px;
+    
+    display: flex;
+    flex-direction:column;
 }
 
 .slogan-one {
@@ -156,14 +257,35 @@ body {
     line-height: 50px;
     text-align: left;  
     height: 100px;
-    padding-top: 120px;
+    padding-top: 115px;
     background-repeat:no-repeat;
-    background-position: 85% 22%;
+    background-position: 82% 22%;
+    margin-bottom: 30px;
 }
 
+.description-text {
+    margin: 0;
+    margin-bottom: 60px;
+}
+
+.slider-item-description .button-standard {
+    display: block;
+    margin:0;
+    margin-bottom: 40px;
+}
+
+.slider-numbers {
+    margin: 0;
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.slider-numbers p {
+   margin-right: 20px; 
+}
 .number {
-    font-size: 36px;
-    color: #000000;
+   font-size: 36px;
+    color: #000000;   
 }
 
 .fitness {
@@ -176,7 +298,10 @@ body {
 
 .slider-pagination {
     margin: 0 auto;
+    padding: 0;
     width: 80px;
+    display:flex;
+    margin-bottom: 70px;
 }
 
 /*Categories*/
@@ -184,6 +309,8 @@ body {
 .categories {
     margin: 0 auto;
     width: 1160px;
+    padding: 0;
+    margin-bottom: 20px;
 }
 
 .category-list {
@@ -191,32 +318,38 @@ body {
     justify-content: space-between;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .category {
-    width: 160px;
-    height:253px;
     background-color: #FFE17F;
 }
 
-.category a {
-    
+.category-link {
+    display: block;   
     text-decoration: none;
+    width: 160px;   
 }
 
-.category span {
+.category-link span {
     font-weight: 800;
     font-size: 18px;
     line-height: 24px;
     color:#000000;
+    background-color: white;
+    display: block;
+    height: 93px;
+    margin-top: 160px;
+    padding-top: 30px;
 }
 
 /*Advantages*/
 
 .advantages {
-    background-color: #F0F0F0;
+    background: linear-gradient(to bottom, #ffffff 25%, #f0f0f0 25%);
     width: 1440px;
     margin: 0 auto;
+    margin-bottom:70px;
 }
 
 .container-main {
@@ -229,39 +362,56 @@ body {
 
 .advantages-buttons {
     width: 280px;
-    border-right: solid 3px black;
+    border-right: solid 7px black;
+    display: flex;
+    flex-direction: column;
+    padding-top: 75px;
+}
+
+.advantages-buttons .button {
+    margin-bottom:45px;
+}
+.advantages-description {
+    margin: 0;
+    padding: 0;
 }
 
 .advantage {
     width: 764px;
+    margin: 0;
+    padding: 0;
 }
 .advantage h3 {
+    margin: 0;
     font-weight:800;
     font-size: 50px;
     line-height: 50px;
+    padding-top: 65px;
+    margin-bottom: 34px;    
 }
 
 .advantages-description p {
     width: 448px;
+    margin-bottom: 145px;
 }
 
 .advantage-delivery {
     background-image: url("../images/running-man.png");
     background-repeat:no-repeat;
-    background-position: 85% top;
+    background-position: 85% 100%;
 }
 
 .advantage-warranty {
     background-image: url("../images/warranty-icon.png");
     background-repeat:no-repeat;
-    background-position: 85% top;
-    display: none;
+    background-position: 85% 100%;
+    display:none;
 }
 
 .advantage-credit {
     background-image: url("../images/credit-icon.png");
     background-repeat:no-repeat;
-    background-position: 85% top;
+    background-position: 85% 100%;
     display: none;
 }
 
@@ -269,10 +419,15 @@ body {
 /*Delivery button*/ 
 
 .button-wedeliver {
-    display: block;
+    display: flex;
+    justify-content: space-between;
     width: 1160px;
     background-color: #F0F0F0;
     margin: 0 auto;
+    padding: 0;
+    padding-right: 30px;
+    margin-bottom: 70px;
+    border: none;
 }
 
 .wedeliverpicture {
@@ -282,7 +437,7 @@ body {
     height: 100px;
     background-image: url("../images/truck.svg");
     background-repeat:no-repeat;
-    background-position: center;
+    background-position: center; 
 }
 
 .wedelivertext {
@@ -293,27 +448,57 @@ body {
     line-height: 23px;
     text-align: center;
     letter-spacing: 0.2em;
+    align-self: center;
 }
 
+.we-deliver-info {
+    align-self: center;
+}
 
 /*Information block*/
+
+
+
+/*About us block*/ 
+
+.about-us {
+    width:530px;
+    border-top: solid 7px black; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 .information-block {
     margin: 0 auto;
     width: 1160px;
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 85px;
 }
-/*About us block*/ 
 
-.about-us {
-    width:580px;
-}
 .information-header {
     font-size: 50px;
     line-height: 50px;
+    margin: 0;
+    padding: 0;
+    padding-top: 35px;
+    margin-bottom: 48px;
 }
 
 .information-paragraph {
     width: 500px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.transport-companies {
+    margin: 0;
+    padding:0;
+    margin-bottom: 30px;
+    list-style-type: none;
 }
 
 .transport {
@@ -323,44 +508,94 @@ body {
     color: #000000;
 }
 
+.transport:not(.transport-companies:last-child) {
+    margin-bottom: 20px;
+}
+
+.about-us .button-standard {
+    display: box;
+}
+
 
 /*Contacts block*/ 
 .contacts {
-    width: 580px;
+    width: 530px;
+    border-top: solid 7px black;
+    display: flex;
+    flex-direction: column;
 }
 
 .address-header {
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
+    margin: 0;
+    margin-bottom: 15px;
 }
 
 .contact-address {
     font-style: normal;
+    margin-bottom: 30px;
 }
-
+.contact-address .information-paragraph {
+    margin: 0;
+    padding: 0;
+}
 .contact-phone {
-    color: inherit
+    display: block;
+    color: inherit; 
+    margin-top: -30px;
+    padding: 0;
 }
 
 /*Subscribe*/ 
 
+.subscribe-wrap {
+    margin: 0 auto;
+    padding: 0; 
+    width: 1160px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 .subsribe {
     background-color: #F0F0F0;
     width: 1440px;
     margin: 0 auto; 
 }
 
-.subscribe-wrap {
-    flex-wrap: wrap;
-}
-
 .subscribe-item {
     width:580px;
+    padding-top: 70px;
 }
 
+.subscribe-form input {
+    width:567px;
+    height:55px;
+}
 
-/*FOOTER*/ 
+.subscribe-button{
+    display:inline-block;
+    width: 253px;
+    height: 55px;
+}
+.subscribe-paragraph {
+    margin:0;
+    padding:0;
+    width: 540px;
+    height: 90px;
+    margin-top: 80px;
+    margin-bottom: 140px;
+}
+
+.inf-par-free {
+    width: 160px;
+    height: 30px;
+    text-align: right;
+    margin-bottom: 56px;
+}
+
+/*FOOTER - тоже будет на гридах*/ 
 
 .page-footer {
     background-color: #444444;
@@ -416,6 +651,7 @@ body {
 .inner-header h1 {
     font-size: 50px;
     line-height:50px;
+    margin-bottom: 16px;
 }
 
 .breadcrumbs {
@@ -423,6 +659,11 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    margin-bottom: 34px;
+}
+
+.breadcrumbs-item {
+    margin-right: 36px;
 }
 
 .breadcrumbs-link {
@@ -482,6 +723,23 @@ body {
 
 /*Catalogue*/ 
 
+.sort-form {
+    padding: 22px 40px;
+    margin: 0;
+    display: flex;
+    justify-content: start;
+}
+.sort-form label {
+    margin-right: 205px;
+}
+
+.upanddown {
+    width: 30px;
+    height: 10px;
+    background: black;
+    margin-left: auto;
+}
+
 .monopods {
     background:#ffffff;
     width: 840px;
@@ -495,10 +753,24 @@ body {
     flex-wrap: wrap;
     justify-content: flex-start;
     padding-top: 70px;
+    margin-bottom: 40px
 }
 
 .monopods-list-item {
     margin-left: 40px;
+}
+
+.monopods-list-item img {
+    margin-bottom: 15px;
+}
+
+.catalog-button {
+    display:none;
+}
+
+.item-desc {
+    display: flex;
+    justify-content: space-between;
 }
 
 .item-name {
@@ -507,11 +779,17 @@ body {
     color: #000000;
 }
 
+.item-price {
+    display: block;
+    align-self: center;
+}
+
 .download-button {
     display: block;
     width: 760px;
     margin: 0 auto;
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .catalog-paginator {
@@ -520,12 +798,20 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 70px;
 }
 
 .page-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex; 
     justify-content: space-around;
+}
+
+.paginator-item {
+    margin-right: 30px;
+    align-self: center;
 }
 
 .paginator-link {
@@ -538,11 +824,17 @@ body {
 }
 
 .link-disabled {
+    display: block;
     color:#444444;
+    align-self: center;
+    padding: 25px;
 }
 
 .link-enabled {
     color:#000000;
+    display: block;
+    align-self: center;
+    padding: 25px;
 }
 
 
@@ -550,6 +842,9 @@ body {
 
 /*modal window*/
 
+.modal-window {
+    display: none;
+}
 .modal-header {
     font-size: 50px;
     line-height:50px;
@@ -565,7 +860,9 @@ body {
     line-height: 21px;
 }
 
-
+.popover {
+    display: none
+}
 
 
 
