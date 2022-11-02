@@ -25,7 +25,7 @@
           <div class="search-form-block">
             <form class="search-form">
             <label class="visually-hidden">Поиск по сайту.</label>
-            <input type="search" placeholder="Поиск по сайту"> 
+            <input class="search-field" type="search" placeholder="Поиск по сайту"> 
             <button class="button search-button">Найти</button>
             </form>
           </div>
@@ -69,7 +69,9 @@
         <ul class="main-nav">
           <li class="nav-item catalog">
             <a class="raleway catalog-link" href="#">Каталог товаров</a>
-            <a class="toggle-button" aria-label="Открыть подменю" href=""></a>
+            <div class="toggle-button" aria-label="Открыть подменю" href="">
+              <span class="tog-container"></span>
+            </div>
             <ul class="nav-category-list">
               <li class="nav-category-item">
                 <a href="#">Виртиуальная реальность</a>
@@ -323,7 +325,7 @@
         <br>длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="email">Ваш e-mail</label> 
-          <input type="email" class="email-form" name="e-mail" value="Ваш e-mail" id="email">
+          <input class="subscribe-field" type="email" class="email-form" name="e-mail" value="Ваш e-mail" id="email">
           <button class="button big-button subscribe-button" type="submit">Подписаться</button>
         </form>
         <p class="inf-par-free">Это бесплатно</p>
@@ -415,56 +417,64 @@
   </footer>
 
   <!--Модальное окно -->
-  <section class="modal-window">
-    <h2 class="modal-header raleway">Доставка под заказ</h2>
-    <button type="button" class="close-button"><span class="visually-hidden">Закрыть</span></button>
+<div class="modal-container">
+  <div class="modal-window modal-auth">
+    <button class="modal-close-button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+    <section class="modal-content">
+      <h2 class="modal-header raleway">Доставка под заказ</h2>
 
-    <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+      <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
       
-      <div>
-      <label for="name-field">Ваше имя:</label>
-      <input type="text" id="name-field" name="name" placeholder="Ваше имя"  required> 
-      <p>Добавьте имя</p>
-      </div>
+      <label class="element name-element" for="name-field">Ваше имя:
+      <input class="delivery-input name-field" type="text" id="name-field" name="name" placeholder="Введите имя"  required> 
+      <p class="name-legend">Добавьте имя</p></label>
+     
+      <label class="element mail-element" for="email-field">Ваш e-mail:
+      <input class="delivery-input mail-field" type="email" id="email-field" name="email" placeholder="почта" required>
+      <p class="mail-legend">Забавный у вас адрес</p></label>
+      
+      <label class="element order-element" for="order-field">Что нужно привезти:
+      <input class="delivery-input text-field" type="text" id="order-field" name="order" placeholder="В свободной форме">
+      </label>
 
-      <div><label for="email-field">Ваш e-mail:</label>
-      <input type="email" id="email-field" name="email" placeholder="почта" required>
-      <p>Забавный у вас адрес</p>
-      </div>
-
-      <div><label for="order-field">Что нужно привезти:</label>
-      <input type="text" id="order-field" name="order" placeholder="В свободной форме">
-      </div>
-
-      <div><label for="quantity-field">Количество:</label>
-      <button class="i-button" type="button"><span class="vidually-hidden">Для информации</span></button>
-      <div class="information-text">Постараемся найти, сколько нужно. Привезём сколько 
-        получится по требованиям к провозу багажа.</div>
-      <input type="number" id="quantity-field" name="quantity" min="1" max="10" step="1">      
-      </div>
-
+      <label class="element quantity-element" for="quantity-field">Количество:
+      <button class="i-button" type="button"><span class="visually-hidden">Для информации</span></button>
+      <div class="information-text"><span class="info-wrap">Постараемся найти, сколько нужно. Привезём сколько 
+        получится по требованиям к провозу багажа.</span></div>
+      <div class="quantity-wrap"><span class="quantity-button qu-minus">-</span><input class="delivery-input number-field" type="text" id="quantity-field" name="quantity" value="1">      
+        <span class="quantity-button qu-plus">+</span></div>
+    </label>
+    
       <button class="button button-standard" type="submit">Отправить</button>
     </form>
-  </section>
+    </section>
+  </div>
+</div>
 
   <!--Корзина-->
+<div class="popover-wrap">
   <section class="popover">
     <h2 class="visually-hidden">Корзина</h2>
-    <div class="basket">
-      <div class="basket-item">
-        <a class="basket-link" href="#"><img src="images/catalog-item-1.jpg" width="39" height="43" alt="Любительская селфи-палка">Любительская селфи-палка</a>
+    <ul class="basket-popover">
+      <li class="basket-item ">
+        <a class="basket-link" href="#"><img src="images/catalog-item-1.jpg" width="39" height="43" alt="Любительская селфи-палка">
+          <span class="basket-text">Любительская селфи-палка</span></a>
         <button class="close-button" type="button"><span class="visually-hidden">Удалить из корзины</span></button>
-      </div>
-      <div class="basket-item">
-        <a class="basket-link" href="#"><img src="images/catalog-item-2.jpg" width="39" height="43" alt="Профессиональная селфи-палка">Профессиональная селфи-палка</a>
+      </li>
+      <li class="basket-item">
+        <a class="basket-link" href="#"><img src="images/catalog-item-2.jpg" width="39" height="43" alt="Профессиональная селфи-палка">
+          <span class="basket-text">Профессиональная селфи-палка</span></a>
         <button class="close-button" type="button"><span class="visually-hidden">Удалить из корзины</span></button>
-      </div>
+      </li>
+    </ul>
       <div class="total">
         <span class="total-items">Товаров: 2</span><span class="total-amount">Сумма: 2000Р</span>
-      </div>
-      <a href="#" class="button big-button">Открыть корзину</a>
-    </div>
-  </section>
+      </div>    
+    <a href="#" class="button basket-button">Открыть корзину</a>
+    
+  </section></div>
 
 
    </body>
