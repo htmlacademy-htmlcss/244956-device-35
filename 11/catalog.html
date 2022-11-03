@@ -32,14 +32,15 @@
                     </div>
 
         <ul class="action-nav">
-            <li class="action-nav-item entered"><a href="#">
+            <li class="action-nav-item entered">
+                <a class="act-link" href="#">
                 <svg aria-hidden="true" focusable="false" width="13" height="12" viewBox="0 0 13 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 12H13C12.8 9.4 10.9 7.2 8.3 6.5C9.3 5.9 10 4.8 10 3.5C10 1.6 8.4 0 6.5 0C4.6 0 3 1.6 3 3.5C3 4.8 3.7 5.9 4.7 6.5C2.1 7.2 0.2 9.4 0 12Z"/>
                 </svg>
                     Коля Петухов</a></li>
             <li class="action-nav-item"><a class="item-current" href="#">Выйти</a></li>
             <li class="action-nav-item compare-link">
-                <a href="#">
+                <a class="act-link" href="#">
                   <svg class="action-nav-icon" aria-hidden="true" focusable="false" width="10" height="12" viewBox="0 0 10 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 0H4V12H6V0Z"/>
                     <path d="M2 4H0V12H2V4Z"/>
@@ -49,28 +50,49 @@
                 </a>
               </li>
               <li class="action-nav-item basket">
-                <a href="#">
-                    <svg class="basket-2"  aria-hidden="true" focusable="false" width="21" height="22" viewBox="0 0 21 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10.5" cy="10.787" r="10.5" fill="white"/>
-                        <path d="M11.5078 10.135C11.8064 9.86432 12.0211 9.59832 12.1518 9.33699C12.2824 9.07565 12.3478 8.74432 12.3478 8.34299C12.3478 7.82032 12.1984 7.40032 11.8998 7.08299C11.6011 6.76565 11.1484 6.60699 10.5418 6.60699C9.94445 6.60699 9.49645 6.76565 9.19778 7.08299C8.89911 7.39099 8.68445 7.81099 8.55378 8.34299C8.52578 8.44565 8.47911 8.52499 8.41378 8.58099C8.34845 8.63699 8.27378 8.66499 8.18978 8.66499H7.54578C7.46178 8.66499 7.38711 8.63699 7.32178 8.58099C7.26578 8.51565 7.23778 8.44099 7.23778 8.35699C7.25645 7.88099 7.39645 7.40965 7.65778 6.94299C7.92845 6.47632 8.31111 6.09365 8.80578 5.79499C9.30045 5.49632 9.87911 5.34699 10.5418 5.34699C11.2044 5.34699 11.7691 5.48232 12.2358 5.75299C12.7118 6.01432 13.0711 6.37365 13.3138 6.83099C13.5564 7.27899 13.6778 7.78299 13.6778 8.34299C13.6778 8.93099 13.5751 9.43499 13.3698 9.85499C13.1738 10.2657 12.8331 10.6857 12.3478 11.115L9.22578 14.027H13.5098C13.6124 14.027 13.7011 14.0643 13.7758 14.139C13.8504 14.2137 13.8878 14.3023 13.8878 14.405V14.909C13.8878 15.0117 13.8504 15.1003 13.7758 15.175C13.7011 15.2497 13.6124 15.287 13.5098 15.287H7.47578C7.37311 15.287 7.28445 15.2497 7.20978 15.175C7.13511 15.1003 7.09778 15.0117 7.09778 14.909V14.405C7.09778 14.3023 7.11645 14.2183 7.15378 14.153C7.20045 14.0783 7.28445 13.985 7.40578 13.873L11.5078 10.135Z"/>
-                        </svg>
+                <a class="act-link" href="#">
                   <svg class="action-nav-icon" aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.3 5L11.8 5.2L8.6 0.3C8.5 0.1 8.2 0 8 0C7.8 0 7.5 0.1 7.4 0.3L4.2 5.2H0.7C0.3 5.2 0 5.5 0 5.9C0 6 0 6 0 6.1L1.9 12.9C2.1 13.6 2.6 14 3.3 14H12.7C13.4 14 13.9 13.6 14.1 12.9L16 6C16 5.9 16 5.9 16 5.8C16 5.4 15.7 5 15.3 5ZM8 1.9L10.2 5.1H5.9L8 1.9Z"/>
                     </svg>
                   Корзина
-                </a>
-              </li>
+                  <span class="basket-number">2</span>
+
+                   <!--popover-->
+<div class="popover-wrap">
+    <section class="popover">
+      <h2 class="visually-hidden">Корзина</h2>
+      <ul class="basket-popover">
+        <li class="basket-item ">
+          <a class="basket-link" href="#"><img src="images/catalog-item-1.jpg" width="39" height="43" alt="Любительская селфи-палка">
+            <span class="basket-text">Любительская селфи-палка</span></a>
+          <button class="close-button" type="button"><span class="visually-hidden">Удалить из корзины</span></button>
+        </li>
+        <li class="basket-item">
+          <a class="basket-link" href="#"><img src="images/catalog-item-2.jpg" width="39" height="43" alt="Профессиональная селфи-палка">
+            <span class="basket-text">Профессиональная селфи-палка</span></a>
+          <button class="close-button" type="button"><span class="visually-hidden">Удалить из корзины</span></button>
+        </li>
+      </ul>
+        <div class="total">
+          <span class="total-items">Товаров: 2</span><span class="total-amount">Сумма: 2000Р</span>
+        </div>    
+      <a href="#" class="button basket-button">Открыть корзину</a>
+      
+    </section></div>
+            </li>
           </ul>
-          </div>
+        </div>
+               
+         
 
 
           <div class="div-second-row">
           <ul class="main-nav">
             <li class="nav-item catalog">
-                <a class="raleway catalog-link" href="#">Каталог товаров</a>
-                <div class="toggle-button" aria-label="Открыть подменю" href="">
-                    <span class="tog-container"></span>
-                </div> 
+                <a class="raleway catalog-link" href="#">
+                  <span class="catalog-menu-text">Каталог товаров</span>
+                  <div class="catalog-toggle-button"></div>
+                </a>
             <ul class="nav-category-list">
               <li class="nav-category-item"><a href="#">Виртиуальная реальность</a></li>
               <li class="nav-category-item"><a href="#">Фитнес-браслеты</a></li>
@@ -79,6 +101,7 @@
               <li class="nav-category-item"><a href="#">Умные часы</a></li>
               <li class="nav-category-item cameras"><a href="#">Экшн-камеры</a></li>
             </ul></li>
+
             <li class="nav-item delivery"><a  class="raleway" href="#">Доставка</a></li>
             <li class="nav-item warranty"><a  class="raleway" href="#">Гарантии</a></li>
             <li class="nav-item nav-contacts"><a  class="raleway" href="#">Контакты</a></li>
