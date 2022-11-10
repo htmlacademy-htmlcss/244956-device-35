@@ -340,13 +340,24 @@ body {
 }
 
 .action-nav-item {
-  margin-right: 27px;
   padding-top: 6px;
-  padding-right: 2px;
+}
+
+.enter-link {
+  flex-grow: 1;
+}
+
+.entered {
+  width: 146px;
+  margin-right: 28px;
+}
+
+.entered svg {
+  margin-right: 13px;
 }
 
 .nav-contacts {
-  margin-right: 2px;
+  margin-right: -3px;
 }
 
 .action-nav-item a:not(.basket-item a, .item-current) {
@@ -362,7 +373,6 @@ body {
   align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 .action-nav-item .item-current {
@@ -400,9 +410,7 @@ body {
   margin-right: 12px;
 }
 
-.entered {
-  width: 146px;
-}
+
 .basket {
   position: relative;
   margin-right: 0;
@@ -426,15 +434,16 @@ body {
   align-items: center;
   font-size: 14px;
   top: 10px;
-  left: -15px;
+  left: -12px;
 }
 
 .action-nav-item .item-current {
   color: rgba(0, 0, 0, 0.3);
+  margin-right: 26px;
 }
 
 .compare-link {
-  margin-left: auto;
+  margin-right: 33px;
 }
 
 .main-nav {
@@ -446,7 +455,7 @@ body {
   padding: 0;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: 5px;
+  margin-bottom: 17px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -667,7 +676,7 @@ body {
   width: 1160px;
   position: relative;
   z-index: 0;
-  margin-bottom: 58px;
+  margin-bottom: 62px;
 }
 
 .slider-item {
@@ -679,8 +688,8 @@ body {
     color-stop(23%, #ffe17f),
     color-stop(23%, #ffffff)
   );
-  background: -o-linear-gradient(top, #ffe17f 23%, #ffffff 23%);
-  background: linear-gradient(to bottom, #ffe17f 23%, #ffffff 23%);
+  background: -o-linear-gradient(top, #ffe17f 21%, #ffffff 21%);
+  background: linear-gradient(to bottom, #ffe17f 21%, #ffffff 21%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -705,18 +714,31 @@ body {
 }
 
 .slider-item-image {
-  margin-top: -25px;
+  margin-top: -37px;
 }
 
-.slogan-one {
+.slogan-one::before, 
+.slogan-two::before,
+.slogan-three::before {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  top: -8px;
+  left: 288px;
+  width: 232px;
+  height: 135px;
+  z-index: -1;
+}
+.slogan-one::before {
   background-image: url("../images/slider01.svg");
 }
 
-.slogan-two {
+.slogan-two::before {
   background-image: url("../images/slider02.svg");
 }
 
-.slogan-three {
+.slogan-three::before {
   background-image: url("../images/slider03.svg");
 }
 
@@ -727,10 +749,10 @@ body {
   line-height: 50px;
   text-align: left;
   height: 100px;
-  padding-top: 97px;
-  background-repeat: no-repeat;
-  background-position: 83% 10%;
+  padding-top: 87px;
   margin-bottom: 30px;
+  position: relative;
+  z-index:2;
 }
 
 .description-text {
@@ -740,7 +762,7 @@ body {
 
 .slider-item-description .button-standard {
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   -ms-flex-item-align: start;
   -ms-grid-row-align: start;
   align-self: start;
@@ -754,13 +776,14 @@ body {
 }
 
 .slider-numbers p {
-  margin-right: 20px;
+  margin-right: 22px;
+  display: flex;
+  flex-direction: column;
 }
 .number {
   font-size: 36px;
   color: #000000;
-  margin-bottom: -19px;
-  display: block;
+  margin-bottom: 12px;
 }
 
 .fitness {
@@ -772,7 +795,7 @@ body {
 }
 
 .number-descr {
-  font-size: 14spx;
+  font-size: 16px;
 }
 
 .arrow-button {
@@ -784,12 +807,12 @@ body {
 }
 
 .left-arrow {
-  top: 183px;
+  top: 174px;
   left: 24px;
 }
 
 .right-arrow {
-  top: 183px;
+  top: 174px;
   left: 534px;
 }
 
@@ -869,7 +892,7 @@ body {
   margin: 0 auto;
   width: 1170px;
   padding: 0;
-  margin-bottom: 45px;
+  margin-bottom: 48px;
 }
 
 .category-list {
@@ -878,9 +901,8 @@ body {
   margin: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 160px 40px 160px 40px 160px 40px 160px 40px 160px 40px 160px;
-  grid-template-columns: repeat(6, 160px);
-  gap: 40px;
+  grid-template-columns: repeat(6, 165px);
+  gap: 36px;
 }
 
 .category {
@@ -907,10 +929,9 @@ body {
   background: linear-gradient(#ffc700 56%, white 44%);
 }
 .category-link {
-  display: block;
+  
   text-decoration: none;
-  width: 161px;
-  border: 1px solid white;
+
   position: relative;
 }
 
@@ -940,8 +961,8 @@ body {
   content: "";
   width: 160px;
   height: 160px;
-  top: 0;
-  left: 0;
+  top: 4px;
+  left: 3px;
   background-repeat: no-repeat;
   background-image: url("../images/virtual-reality.svg");
   background-position: center 50px;
@@ -952,8 +973,8 @@ body {
   content: "";
   width: 160px;
   height: 160px;
-  top: 0;
-  left: 0;
+  top: -6px;
+  left: 3px;
   background-repeat: no-repeat;
   background-image: url("../images/monopods.svg");
   background-position: center 50px;
@@ -976,7 +997,7 @@ body {
   content: "";
   width: 160px;
   height: 160px;
-  top: 0;
+  top: 6px;
   left: 0;
   background-repeat: no-repeat;
   background-image: url("../images/bracelets.svg");
@@ -1000,7 +1021,7 @@ body {
   content: "";
   width: 160px;
   height: 160px;
-  top: 0;
+  top: 7px;
   left: 0;
   background-repeat: no-repeat;
   background-image: url("../images/qcopters.svg");
@@ -1058,8 +1079,8 @@ body {
   height: 320px;
   width: 7px;
   background: #000000;
-  left: 276px;
-  top: -6px;
+  left: 279px;
+  top: -8px;
 }
 
 .button-advantages {
@@ -1124,21 +1145,21 @@ body {
 .advantage-delivery {
   background-image: url("../images/running-man.png");
   background-repeat: no-repeat;
-  background-position: 89% 87%;
+  background-position: 88.5% 92%;
   display: none;
 }
 
 .advantage-warranty {
   background-image: url("../images/warranty-icon.png");
   background-repeat: no-repeat;
-  background-position: 89% 87%;
+  background-position: 89% 92%;
   display: none;
 }
 
 .advantage-credit {
   background-image: url("../images/credit-icon.png");
   background-repeat: no-repeat;
-  background-position: 89% 87%;
+  background-position: 89% 92%;
   display: none;
 }
 
@@ -1157,7 +1178,7 @@ body {
   background-color: #f0f0f0;
   margin: 0 auto;
   padding: 0;
-  margin-bottom: 81px;
+  margin-bottom: 82px;
   border: none;
 }
 
@@ -1193,7 +1214,7 @@ body {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
-  margin-left: 194px;
+  margin-left: 195px;
 }
 
 .we-deliver-info {
@@ -1301,7 +1322,7 @@ body {
 }
 
 .button-about {
-  width: 250px;
+  width: 239px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -1327,7 +1348,7 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
-  margin-left: 80px;
+  margin-left: 98px;
   font-size: 18px;
 }
 
@@ -1358,6 +1379,12 @@ body {
 .contacts .information-paragraph {
   margin: 0;
   padding: 0;
+}
+
+.button-writeus {
+  width: 229px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /*Subscribe*/
@@ -1465,21 +1492,22 @@ body {
 .subscribe-paragraph {
   margin: 0;
   padding: 0;
-  margin-top: 75px;
-  margin-bottom: 140px;
+  margin-top: 76px;
+  margin-bottom: 145px;
   width: 540px;
-  margin-left: 26px;
+  margin-left: 19px;
 }
 
 .inf-par-free {
   width: 160px;
   height: 30px;
   text-align: right;
-  margin-bottom: 70px;
+  margin-bottom: 69px;
   background-image: url("../images/v.svg");
   background-repeat: no-repeat;
   background-position: 3px 7px;
-  margin-left: 180px;
+  margin-left: 186px;
+  margin-top: 14px;
 }
 
 /*FOOTER*/
@@ -1503,7 +1531,7 @@ body {
     "logo . ."
     "address nav tel"
     "block social academy";
-  gap: 30px;
+  gap: 29px;
 }
 
 .footer-logo-block {
@@ -1530,7 +1558,7 @@ body {
   width: 80px;
   height: 7px;
   background-color: #ffc700;
-  top: 180px;
+  top: 176px;
   left: 0;
 }
 
@@ -1549,11 +1577,11 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-left: 42px;
+  margin-left: 48px;
 }
 
 .footer-nav-item:not(.footer-nav-list li:last-child) {
-  margin-right: 30px;
+  margin-right: 32px;
 }
 
 .footer-nav-item a {
@@ -1583,7 +1611,8 @@ body {
   color: inherit;
   font-size: 16px;
   line-height: 20px;
-  padding-left: 15px;
+  padding-left: 25px;
+  padding-top:6px;
   grid-area: tel;
 }
 
@@ -1616,7 +1645,7 @@ body {
   justify-content: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding-right: 88px;
+  padding-right: 81px;
   padding-top: 15px;
 }
 
@@ -1654,8 +1683,7 @@ body {
   grid-area: academy;
   -ms-grid-column-align: end;
   justify-self: end;
-  padding-top: 15px;
-  padding-right: 10px;
+  padding-top: 20px;
 }
 
 .footer-social-item .social-button:focus {
@@ -1700,7 +1728,7 @@ body {
   font-size: 50px;
   line-height: 50px;
   margin-bottom: 9px;
-  margin-top: 48px;
+  margin-top: 36px;
 }
 
 .breadcrumbs {
@@ -1715,6 +1743,20 @@ body {
 
 .breadcrumbs-item {
   margin-right: 36px;
+  position: relative
+}
+
+.breadcrumbs-item::after {
+  position: absolute;
+  content: "";
+  right: -19px;
+  top: 10px;
+  width: 5px;
+  height: 10px;
+  background-image: url("../images/brcrumbs-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  opacity: 0.3;
 }
 
 .breadcrumbs-link {
@@ -1765,7 +1807,7 @@ body {
   letter-spacing: 0.2em;
   margin: 0;
   padding: 0;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 }
 
 .catalog-filter {
@@ -1783,7 +1825,7 @@ body {
   margin: 0;
   padding: 0;
   width: 200px;
-  margin-bottom: 56px;
+  margin-bottom: 52px;
   position: relative;
 }
 
@@ -1803,7 +1845,7 @@ body {
 }
 
 .range {
-  margin-top: 20px;
+  margin-top: 22px;
 }
 
 .range-scale {
@@ -1845,12 +1887,12 @@ body {
 }
 
 .toggle-min {
-  left: -10px;
-  top: -8px;
+  left: -9px;
+  top: -7px;
 }
 
 .toggle-max {
-  left: 113px;
+  left: 111px;
   top: -8px;
 }
 
@@ -1858,6 +1900,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: -14px;
+  margin-top: 2px;
 }
 
 .catalog-filter-label {
@@ -1872,7 +1916,7 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-right: 30px;
+  margin-right: 47px;
 }
 
 .range-input {
@@ -1911,13 +1955,14 @@ body {
   padding: 0;
   list-style-type: none;
   padding-top: 20px;
+  margin-bottom: 22px;
 }
 
 .color-item {
   position: relative;
   display: block;
   padding-left: 36px;
-  margin-bottom: 18px;
+  margin-bottom: 17px;
 }
 
 .control-mark {
@@ -1943,11 +1988,13 @@ body {
   content: "";
 }
 
-.field-color,
 .bluetooth-field {
   margin-bottom: 29px;
 }
 
+.field-color {
+   margin-bottom: 27px;
+}
 /*Radiobuttons*/
 
 .bluetooth-radio-list {
@@ -1957,14 +2004,15 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  padding-top: 20px;
+  padding-top: 16px;
+  margin-bottom: -16px;
 }
 
 .bluetooth-option {
   position: relative;
   display: block;
   padding-left: 36px;
-  margin-bottom: 16px;
+  margin-bottom: 22px;
 }
 
 .control-input[type="radio"] + .control-mark {
@@ -2028,6 +2076,8 @@ body {
   -ms-flex-item-align: start;
   -ms-grid-row-align: start;
   align-self: start;
+  width: 220px;
+  box-sizing: border-box;
 }
 
 .field-range::before {
@@ -2172,7 +2222,7 @@ body {
 
 .monopods-list-item {
   margin-left: 40px;
-  margin-bottom: 28px;
+  margin-bottom: 25px;
   cursor: pointer;
   position: relative;
 }
@@ -2283,6 +2333,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  margin-top: 7px;
 }
 
 .download-button:hover {
@@ -2313,7 +2364,7 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 81px;
+  margin-bottom: 78px;
 }
 
 .page-list {
@@ -2328,7 +2379,7 @@ body {
   -webkit-box-pack: left;
   -ms-flex-pack: left;
   justify-content: left;
-  margin-left: 10px;
+
 }
 
 .paginator-item {
@@ -2405,7 +2456,7 @@ body {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
-  padding: 25px;
+  padding: 21px;
 }
 
 /*modal window*/
@@ -2434,7 +2485,7 @@ body {
   margin: auto;
   padding-right: 80px;
   background-color: #ffffff;
-  padding-left: 75px;
+  padding-left: 71px;
   padding-top: 63px;
   padding-bottom: 80px;
   width: 920px;
@@ -2449,14 +2500,14 @@ body {
   font-weight: 800;
   margin: 0;
   padding: 0;
-  margin-bottom: 40px;
+  margin-bottom: 47px;
 }
 
 .modal-close-button {
   position: absolute;
   padding: 0;
-  top: 80px;
-  right: 82px;
+  top: 74px;
+  right: 69px;
   width: 26px;
   height: 26px;
   background-color: #ffffff;
@@ -2719,9 +2770,9 @@ input::-webkit-inner-spin-button {
 .button-send {
   display: block;
   box-sizing: content-box;
-  padding-left: 28px;
+  padding-left: 5px;
   padding-right: 0px;
-  width: 170px;
+  width: 193px;
 }
 
 /*popover*/
