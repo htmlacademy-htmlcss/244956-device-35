@@ -1137,7 +1137,7 @@ body {
 }
 
 .advantages-description p {
-  width: 452px;
+  width: 455px;
   margin-bottom: 145px;
   font-size: 18px;
 }
@@ -2930,3 +2930,4 @@ input::-webkit-inner-spin-button {
 .basket-button:disabled {
   color: rgba(0, 0, 0, 0.6);
 }
+
